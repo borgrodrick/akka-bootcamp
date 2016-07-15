@@ -28,30 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.sysChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnCPU = new System.Windows.Forms.Button();
             this.btnMemory = new System.Windows.Forms.Button();
             this.btnDisk = new System.Windows.Forms.Button();
+            this.btnPauseResume = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sysChart)).BeginInit();
             this.SuspendLayout();
             // 
             // sysChart
             // 
-            chartArea4.Name = "ChartArea1";
-            this.sysChart.ChartAreas.Add(chartArea4);
+            chartArea3.Name = "ChartArea1";
+            this.sysChart.ChartAreas.Add(chartArea3);
             this.sysChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.sysChart.Legends.Add(legend4);
+            legend3.Name = "Legend1";
+            this.sysChart.Legends.Add(legend3);
             this.sysChart.Location = new System.Drawing.Point(0, 0);
             this.sysChart.Margin = new System.Windows.Forms.Padding(4);
             this.sysChart.Name = "sysChart";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.sysChart.Series.Add(series4);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.sysChart.Series.Add(series3);
             this.sysChart.Size = new System.Drawing.Size(912, 549);
             this.sysChart.TabIndex = 0;
             this.sysChart.Text = "sysChart";
@@ -86,11 +87,22 @@
             this.btnDisk.UseVisualStyleBackColor = true;
             this.btnDisk.Click += new System.EventHandler(this.btnDisk_Click);
             // 
+            // btnPauseResume
+            // 
+            this.btnPauseResume.Location = new System.Drawing.Point(777, 255);
+            this.btnPauseResume.Name = "btnPauseResume";
+            this.btnPauseResume.Size = new System.Drawing.Size(123, 41);
+            this.btnPauseResume.TabIndex = 4;
+            this.btnPauseResume.Text = "PAUSE ||";
+            this.btnPauseResume.UseVisualStyleBackColor = true;
+            this.btnPauseResume.Click += new System.EventHandler(this.btnPauseResume_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 549);
+            this.Controls.Add(this.btnPauseResume);
             this.Controls.Add(this.btnDisk);
             this.Controls.Add(this.btnMemory);
             this.Controls.Add(this.btnCPU);
@@ -111,6 +123,7 @@
         private System.Windows.Forms.Button btnCPU;
         private System.Windows.Forms.Button btnMemory;
         private System.Windows.Forms.Button btnDisk;
+        private System.Windows.Forms.Button btnPauseResume;
     }
 }
 
